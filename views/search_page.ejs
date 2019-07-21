@@ -1,0 +1,69 @@
+<div class="full-wrapper">
+    <!-- The sidebar -->
+    <div class="sidebar">
+            <a class="active" href="/main/dash">Home</a>
+            <a href="/main/dash">Insert Members</a>
+        <a href="#contact">Search</a>
+        <a href="#about">All Members</a>
+      </div>
+      <div class="topnav" id="myTopnav">
+        <div id="navbar">
+            <nav class="navbar nav-bar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand mb-0 h1" href="#">ELIM CHRISTIAN CENTRE</a>
+                    <form method="POST" action="/searched" class="mg-b-20">
+                        <div class="row gutters-8">
+                            <div class="mx-sm-3 mb-2 form-group">
+                                <input type="text" placeholder="Firstname ..." class="form-control form" name="firstname">
+                            </div>
+                            <div class="mx-sm-3 mb-2 form-group">
+                                <input type="text" placeholder="LastName ..." class="form-control form" name="lastname">
+                            </div>
+                            <div class="mx-sm-3 mb-2 form-group">
+                                <input type="text" placeholder="Phone" class="form-control">
+                            </div>
+                            <div class="mx-sm-3 mb-2 form-group">
+                                <button type="submit" class="btn btn-secondary mb-2">SEARCH</button>
+                            </div>
+                        </div>
+                    </form>
+            </nav>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!-- Page content -->
+      <div class="content">
+        <div class="details card height-auto">
+            <div class="table-responsive container">
+                <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper no-footer">
+                    <table class="table display data-table text-nowrap dataTable no-footer table-striped table-hover" id="DataTables_Table_0" role="grid">
+                    <thead class="thead-dark">
+                        <tr role="row">
+                                <th scope="col">Num</th>
+                                <th scope="col">Firstname</th>
+                                <th scope="col">LastName</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Date of birth</th>
+              
+                        </tr>
+                    </thead>
+                    <tbody class="table-striped">
+                              <% data.forEach(function(thing){ %> 
+                    <tr role="row" class="odd">
+                            <td class="text-center"></td>
+                            <td><%= thing.FirstName %></td>
+                            <td><%= thing.LastName %></td>
+                            <td>0<%= thing.Phone %></td>
+                            <td><%= thing.DOB %></td>
+                        </tr>
+                        <% }) %>
+                       </tbody>
+                </table>
+                </div>
+              </div> 
+        </div>
+      </div>
+      </div>
+    </div>
+      

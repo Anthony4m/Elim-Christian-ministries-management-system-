@@ -1,0 +1,10 @@
+create  database ELIM_CHRISTIAN_CENTRE;
+use ELIM_CHRISTIAN_CENTRE;
+
+
+create table members (
+FirstName Varchar(255) not null,
+LastName VarChar(255) not null,
+Phone int primary key not null,
+DOB VARCHAR(12) not null
+);

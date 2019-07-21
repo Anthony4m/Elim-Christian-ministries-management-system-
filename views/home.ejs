@@ -1,0 +1,124 @@
+
+<div class="full-wrapper">
+<!-- The sidebar -->
+<div class="sidebar">
+        <a class="active" href="/main/dash">Home</a>
+        <a href="/main/dash">Insert Members</a>
+    <a href="#contact">Search</a>
+    <a href="#about">All Members</a>
+  </div>
+  <div class="topnav" id="myTopnav">
+    <div id="navbar">
+        <nav class="navbar nav-bar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand mb-0 h1" href="#">ELIM CHRISTIAN CENTRE</a>
+                <form method="POST" action="/searched" class="mg-b-20">
+                    <div class="row gutters-8">
+                        <div class="mx-sm-3 mb-2 form-group">
+                            <input type="text" placeholder="Firstname ..." class="form-control form" name="firstname">
+                        </div>
+                        <div class="mx-sm-3 mb-2 form-group">
+                            <input type="text" placeholder="LastName ..." class="form-control form" name="lastname">
+                        </div>
+                        <div class="mx-sm-3 mb-2 form-group">
+                            <input type="text" placeholder="Phone" class="form-control">
+                        </div>
+                        <div class="mx-sm-3 mb-2 form-group">
+                            <button type="submit" class="btn btn-secondary mb-2">SEARCH</button>
+                        </div>
+                    </div>
+                </form>
+        </nav>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <!-- Page content -->
+  <div class="content">
+    <div class="details card height-auto">
+        <div class="heading-layout1">
+                <div class="item-title">
+                        <h3>Add New Members</h3>
+                    </div>
+    <p>We are <strong> <%=count%> </strong>in number </p>
+        </div>
+    
+    
+    <form method="POST" action="/insert" class="form-inline">
+        <div class="row">
+                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                        <label>First Name *</label>
+                        <input type="text"  name="firstname" class="form form-control" placeholder="FirstName" required>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                            <label>Last Name *</label>
+                            <input type="text"  name="lastname" class="form form-control" placeholder="LastName" required>
+                        </div>
+                            <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Date of birth *</label>
+                                    <input type="date"  name="DOB" class="form form-control"  placeholder="DD-MM-YYYY" required>
+                                </div>
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Phone *</label>
+                                        <input type="number"  name="Phone" class="form form-control" min="99999999" max="999999990" placeholder="Phone" required>
+                                    </div>
+                            
+                    
+    <!-- <div class="mx-sm-3 mb-2 form-group">  
+    <input type="text" name="firstname" class="form form-control" placeholder="FirstName" required>
+    </div>     -->
+    <!-- <label>lastname</label>
+    <div class="mx-sm-3 mb-2 form-group">
+    <input type="text" name="lastname" class="form form-control" placeholder="LastName" required>
+    </div> -->
+    <!-- <label>Phone</label>
+    <div class="form-group mx-sm-3 mb-2"> 
+    <input type="number" name="Phone" class="form form-control" placeholder="Phone Number" min="99999999" max="999999990" required>
+    </div> -->
+    <!-- <div class="form-group mx-sm-3 mb-2">
+        <label>Date of birth</label>
+    <input type="date" name="DOB" class="form form-control" placeholder="DD-MM-YYYY" required>
+    </div> -->
+    <div class="form-group mx-sm-3 mb-2">
+    <button class="btn btn-primary mb-2">Save</button>
+    </div>
+    </div>
+    </form>
+    </form>
+    
+    <form method="POST" action="/searched" class="mg-b-20">
+        <div class="row">
+            <div class="col-xl-3 col-lg-6 col-12 form-group">
+                <label>First Name</label>
+                <input type="text" placeholder="Firstname ..." class="form-control form" name="firstname">
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12 form-group">
+                <label>Last Name</label>
+                <input type="text" placeholder="LastName ..." class="form-control form" name="lastname">
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12 form-group">
+                <label>Phone</label>
+                <input type="text" placeholder="Phone" class="form-control">
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <label>Date of Birth</label>
+                    <input type="text" placeholder="Not required *" class="form-control">
+                </div>
+
+            <div class="col-xl-3 col-lg-6 col-12 form-group">
+                <button type="submit" class="btn btn-secondary mb-2">SEARCH</button>
+            </div>
+        </div>
+    </form>
+    
+    <form method="GET" action="/members">
+    <div class="row">
+            <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <button type="submit" class="btn btn-secondary mb-2">Display all members</button>
+                </div>
+    </div>
+   </form>
+  </div>
+  </div>
+</div>
+  

@@ -1,0 +1,8 @@
+create  database admin_pass;
+use admin_pass;
+
+create table admin(
+id int not null primary key,
+username varchar (255) not null,
+password varchar(255) not null
+);

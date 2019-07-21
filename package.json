@@ -1,0 +1,31 @@
+{
+  "name": "elim_ministries",
+  "version": "1.0.0",
+  "description": "Elim database ",
+  "main": "backapp.js",
+  "scripts": {
+    "start": "node backapp.js",
+    "dev": "nodemon backapp.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.16.2",
+    "faker": "^4.1.0",
+    "morgan": "^1.9.1",
+    "mysql": "^2.17.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "sequelize": "^5.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

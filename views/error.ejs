@@ -1,0 +1,41 @@
+<div class="full-wrapper">
+            <!-- The sidebar -->
+            <div class="sidebar">
+                    <a class="active" href="/main/dash">Home</a>
+                    <a href="/main/dash">Insert Members</a>
+                <a href="#contact">Search</a>
+                <a href="#about">All Members</a>
+              </div>
+              <div class="topnav" id="myTopnav">
+                <div id="navbar">
+                    <nav class="navbar nav-bar-expand-lg navbar-light bg-light">
+                            <a class="navbar-brand mb-0 h1" href="#">ELIM CHRISTIAN CENTRE</a>
+                            <form method="POST" action="/searched" class="mg-b-20">
+                                <div class="row gutters-8">
+                                    <div class="mx-sm-3 mb-2 form-group">
+                                        <input type="text" placeholder="Firstname ..." class="form-control form" name="firstname">
+                                    </div>
+                                    <div class="mx-sm-3 mb-2 form-group">
+                                        <input type="text" placeholder="LastName ..." class="form-control form" name="lastname">
+                                    </div>
+                                    <div class="mx-sm-3 mb-2 form-group">
+                                        <input type="text" placeholder="Phone" class="form-control">
+                                    </div>
+                                    <div class="mx-sm-3 mb-2 form-group">
+                                        <button type="submit" class="btn btn-secondary mb-2">SEARCH</button>
+                                    </div>
+                                </div>
+                            </form>
+                    </nav>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars"></i>
+                </a>
+              </div>
+
+              <div class="content">
+                    <div class="details card height-auto">
+                            <h1>OOps the member might already be in our system please check your input <a href="/main/dash">home</a>
+                                <%=err%></h1>
+                        </div>
+                    </div>
